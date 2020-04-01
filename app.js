@@ -5,11 +5,11 @@
 var userName = prompt('Hi. What\'s your name?');
 
 // Display the name back to the user in a custom greeting
-// console.log('Welcome to my website, ' + userName + '. It\'s nice to meet you. Let\'s play a quick game.'); 
-alert('Welcome to my website, ' + userName + '. It\'s nice to meet you. Let\'s play a quick game.'); 
+// console.log('Welcome to my website, ' + userName + '. It\'s nice to meet you. Let\'s play a quick game.');
+alert('Welcome to my website, ' + userName + '. It\'s nice to meet you. Let\'s play a quick game.');
 
 // Ask a user five yes or no questions
-// The answer must be y/n or yes/no 
+// The answer must be y/n or yes/no
 // Normalize the answer for case sensitivity
 // Let the user know they answered the question correctly
 
@@ -72,5 +72,5 @@ if (likesReading.toUpperCase() === 'Y' || likesReading.toUpperCase() === 'YES'){
 
 
 // Display the user's name in a final message
-// console.log('Hope you\'re having a great day, ' + userName + '. Thanks for stopping by!'); 
-alert('Hope you\'re having a great day, ' + userName + '. Thanks for stopping by!'); 
+// console.log('Hope you\'re having a great day, ' + userName + '. Thanks for stopping by!');
+alert('Hope you\'re having a great day, ' + userName + '. Thanks for stopping by!');
