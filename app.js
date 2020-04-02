@@ -129,21 +129,42 @@ hasDogQuestion();
 //   alert(wthMessage);
 // }
 
-// Ask the user if they like hiking
-var likesHiking = prompt('Do you like hiking?');
-console.log('Likes hiking: ' + likesHiking);
 
-if (likesHiking.toUpperCase() === 'Y' || likesHiking.toUpperCase() === 'YES') {
-  // console.log('Me, too! There are so many pretty places to get out and explore.');
-  alert('Me, too! There are so many pretty places to get out and explore.');
-  rightAnswer = rightAnswer + 1;
-}else if (likesHiking.toUpperCase() === 'N' || likesHiking.toUpperCase() === 'NO'){
-  // console.log('That\'s ok. There are other fun ways to experience the outdoors.');
-  alert('That\'s ok. There are other fun ways to experience the outdoors.');
-}else {
-  // console.log(wthMessage);
-  alert(wthMessage);
+function likesHikingQuestion(){
+  // Ask the user if they like hiking
+  var likesHiking = prompt('Do you like hiking?');
+  console.log('Likes hiking: ' + likesHiking);
+
+  if (likesHiking.toUpperCase() === 'Y' || likesHiking.toUpperCase() === 'YES') {
+    // console.log('Me, too! There are so many pretty places to get out and explore.');
+    alert('Me, too! There are so many pretty places to get out and explore.');
+    rightAnswer = rightAnswer + 1;
+  }else if (likesHiking.toUpperCase() === 'N' || likesHiking.toUpperCase() === 'NO'){
+    // console.log('That\'s ok. There are other fun ways to experience the outdoors.');
+    alert('That\'s ok. There are other fun ways to experience the outdoors.');
+  }else {
+    // console.log(wthMessage);
+    alert(wthMessage);
+  }
 }
+
+likesHikingQuestion();
+
+// // Ask the user if they like hiking
+// var likesHiking = prompt('Do you like hiking?');
+// console.log('Likes hiking: ' + likesHiking);
+
+// if (likesHiking.toUpperCase() === 'Y' || likesHiking.toUpperCase() === 'YES') {
+//   // console.log('Me, too! There are so many pretty places to get out and explore.');
+//   alert('Me, too! There are so many pretty places to get out and explore.');
+//   rightAnswer = rightAnswer + 1;
+// }else if (likesHiking.toUpperCase() === 'N' || likesHiking.toUpperCase() === 'NO'){
+//   // console.log('That\'s ok. There are other fun ways to experience the outdoors.');
+//   alert('That\'s ok. There are other fun ways to experience the outdoors.');
+// }else {
+//   // console.log(wthMessage);
+//   alert(wthMessage);
+// }
 
 // Ask the user if they like reading
 var likesReading = prompt('Do you like reading?');
