@@ -56,22 +56,41 @@ livesInSeattleQuestion();
 //   alert(wthMessage);
 // }
 
+function vegetarianQuestion(){
+  // Ask the user if they are a vegetarian
+  var vegetarian = prompt('Are you a vegetarian?');
+  console.log('Vegetarian: ' + vegetarian);
 
-// Ask the user if they are a vegetarian
-var vegetarian = prompt('Are you a vegetarian?');
-console.log('Vegetarian: ' + vegetarian);
-
-if (vegetarian.toLowerCase() === 'y' || vegetarian.toLowerCase() === 'yes'){
-  // console.log('Great choice. I\'m a vegetarian, too!');
-  alert('Great choice. I\'m a vegetarian, too!');
-  rightAnswer = rightAnswer + 1;
-}else if (vegetarian.toLowerCase() === 'n' || vegetarian.toLowerCase() === 'no'){
-  // console.log('If you want to try it, a good way to start is with Meatless Mondays!');
-  alert('If you want to try it, a good way to start is with Meatless Mondays!');
-}else {
-  // console.log(wthMessage);
-  alert(wthMessage);
+  if (vegetarian.toLowerCase() === 'y' || vegetarian.toLowerCase() === 'yes'){
+    // console.log('Great choice. I\'m a vegetarian, too!');
+    alert('Great choice. I\'m a vegetarian, too!');
+    rightAnswer = rightAnswer + 1;
+  }else if (vegetarian.toLowerCase() === 'n' || vegetarian.toLowerCase() === 'no'){
+    // console.log('If you want to try it, a good way to start is with Meatless Mondays!');
+    alert('If you want to try it, a good way to start is with Meatless Mondays!');
+  }else {
+    // console.log(wthMessage);
+    alert(wthMessage);
+  }
 }
+
+vegetarianQuestion();
+
+// // Ask the user if they are a vegetarian
+// var vegetarian = prompt('Are you a vegetarian?');
+// console.log('Vegetarian: ' + vegetarian);
+
+// if (vegetarian.toLowerCase() === 'y' || vegetarian.toLowerCase() === 'yes'){
+//   // console.log('Great choice. I\'m a vegetarian, too!');
+//   alert('Great choice. I\'m a vegetarian, too!');
+//   rightAnswer = rightAnswer + 1;
+// }else if (vegetarian.toLowerCase() === 'n' || vegetarian.toLowerCase() === 'no'){
+//   // console.log('If you want to try it, a good way to start is with Meatless Mondays!');
+//   alert('If you want to try it, a good way to start is with Meatless Mondays!');
+// }else {
+//   // console.log(wthMessage);
+//   alert(wthMessage);
+// }
 
 // Ask the user if they have a dog
 var hasDog = prompt('Do you have a dog?');
