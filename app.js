@@ -19,8 +19,9 @@ var wthMessage = 'Sorry, ' + userName + '. I don\'t know what that means. Let\'s
 
 // Set up counter variables for right and wrong answers
 var rightAnswer = 0;
+var i;
 
-// creat functions
+// create functions
 function livesInSeattleQuestion(){
   // Ask the user if they live in Seattle
   var livesInSeattle = prompt('Do you live in Seattle?');
@@ -218,7 +219,7 @@ function numberGuessQuestion(){
 
   var userNumber = prompt('I\'m thinking of a number between 1 and 20. Can you guess what it is?');
 
-  var i = 0;
+  i = 0;
   var highLow;
   var numMatches;
   while (i < 4){
