@@ -90,7 +90,77 @@ if (likesReading.toUpperCase() === 'Y' || likesReading.toUpperCase() === 'YES'){
   alert(wthMessage);
 }
 
+//ask the user to guess a number, give them 4 tries;
+// let them know if the number is too high or too low;
+// let them know if they get it right;
+// let them know what the right answer is after 4 tries
+// log whether or not they got the right answer
+
+//generate a random number for the user to guess
+var myNumber = Math.floor(Math.random() *20);
+console.log('My number is ' + myNumber);
+
+var userNumber = prompt('I\'m thinking of a number between 1 and 20. Can you guess what it is?');
+
+var i = 0;
+var highLow;
+var numMatches;
+while (i < 4){
+  userNumber = Number(userNumber);//convert the user's response to a number so it can be compared
+  console.log('userNumber is ' +userNumber);
+
+  if (userNumber === myNumber){
+    numMatches = true;
+  }else if (userNumber > myNumber){
+    highLow = 'too high';
+  }else if (userNumber < myNumber){
+    highLow = 'too low';
+  }
+
+  if(numMatches){
+    alert('Great job! You got it. The number I was thinking of was ' + myNumber + '.');
+    i = 4;
+  }else if (i<3){
+    userNumber = prompt('Sorry, that number is ' + highLow + '. Try again.');
+  }else{
+    alert('Sorry, that number is ' + highLow + '. The number I was thinking of was ' + myNumber + '.');
+  }
+  i++;
+}
+
+// Make a guessing game
+// Multiple answers stored in an array
+// Six attempts to answer
+//Display all the possible correct answers to the user
+
+var myDogs = ['Charlie', 'Dusty', 'Ginger', 'Scruffy', 'Max', 'Rocky', 'Phoebe', 'Orry'];
+
+var dogGuess = prompt('Although I don\'t have a dog right now, I have had some great ones in the past. Can you guess one of their names?');
+
+i = 0;//making sure i is set back to 0
+while (i < 5){
+  var theyGuessedRight = false;
+  for(var j = 0; j < myDogs.length; j++){
+    if (myDogs[j].toLowerCase() === dogGuess.toLowerCase()){
+    // alert('Yes! I had a wonderful dog named ' + dogGuess + '.');
+      i = 5;
+      j = myDogs.length + 1;
+      theyGuessedRight = true;
+    }
+  }
+  if (theyGuessedRight){
+    alert('Yes! I had a wonderful dog named ' + dogGuess + '.');
+  }else if (i < 4){
+    dogGuess =prompt('No, I never had a dog named ' + dogGuess +'. Guess again.');
+  }else {
+    alert('No, I never had a dog named ' + dogGuess +'.');
+  }
+  i++;
+}
+alert('Here\'s a list of all my wonderful dogs: '+ myDogs);
 
 // Display the user's name in a final message
 // console.log('Hope you\'re having a great day, ' + userName + '. Thanks for stopping by!');
 alert('Hope you\'re having a great day, ' + userName + '. Thanks for stopping by!');
+
+
