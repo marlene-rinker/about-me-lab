@@ -166,21 +166,43 @@ likesHikingQuestion();
 //   alert(wthMessage);
 // }
 
-// Ask the user if they like reading
-var likesReading = prompt('Do you like reading?');
-console.log('Likes reading: ' +likesReading);
 
-if (likesReading.toUpperCase() === 'Y' || likesReading.toUpperCase() === 'YES'){
-  // console.log('I like reading too. I\'d rather read than watch TV.');
-  alert('I like reading too. I\'d rather read than watch TV.');
-  rightAnswer = rightAnswer + 1;
-}else if (likesReading.toUpperCase() === 'N' || likesReading.toUpperCase() === 'NO'){
-  // console.log('Oh well. We don\'t have to like all of the same things.');
-  alert('Oh well. We don\'t have to like all of the same things.');
-}else{
-  // console.log(wthMessage);
-  alert(wthMessage);
+function likesReadingQuestion(){
+  // Ask the user if they like reading
+  var likesReading = prompt('Do you like reading?');
+  console.log('Likes reading: ' +likesReading);
+
+  if (likesReading.toUpperCase() === 'Y' || likesReading.toUpperCase() === 'YES'){
+    // console.log('I like reading too. I\'d rather read than watch TV.');
+    alert('I like reading too. I\'d rather read than watch TV.');
+    rightAnswer = rightAnswer + 1;
+  }else if (likesReading.toUpperCase() === 'N' || likesReading.toUpperCase() === 'NO'){
+    // console.log('Oh well. We don\'t have to like all of the same things.');
+    alert('Oh well. We don\'t have to like all of the same things.');
+  }else{
+    // console.log(wthMessage);
+    alert(wthMessage);
+  }
 }
+
+likesReadingQuestion();
+
+
+// // Ask the user if they like reading
+// var likesReading = prompt('Do you like reading?');
+// console.log('Likes reading: ' +likesReading);
+
+// if (likesReading.toUpperCase() === 'Y' || likesReading.toUpperCase() === 'YES'){
+//   // console.log('I like reading too. I\'d rather read than watch TV.');
+//   alert('I like reading too. I\'d rather read than watch TV.');
+//   rightAnswer = rightAnswer + 1;
+// }else if (likesReading.toUpperCase() === 'N' || likesReading.toUpperCase() === 'NO'){
+//   // console.log('Oh well. We don\'t have to like all of the same things.');
+//   alert('Oh well. We don\'t have to like all of the same things.');
+// }else{
+//   // console.log(wthMessage);
+//   alert(wthMessage);
+// }
 
 //ask the user to guess a number, give them 4 tries;
 // let them know if the number is too high or too low;
