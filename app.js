@@ -287,34 +287,70 @@ numberGuessQuestion();
 // Six attempts to answer
 //Display all the possible correct answers to the user
 
-var myDogs = ['Charlie', 'Dusty', 'Ginger', 'Scruffy', 'Max', 'Rocky', 'Phoebe', 'Orry'];
 
-var dogGuess = prompt('Although I don\'t have a dog right now, I have had some great ones in the past. Can you guess one of their names?');
+function myDogsQuestion(){
+  var myDogs = ['Charlie', 'Dusty', 'Ginger', 'Scruffy', 'Max', 'Rocky', 'Phoebe', 'Orry'];
 
-i = 0;//making sure i is set back to 0
-while (i < 5){
-  var theyGuessedRight = false;
-  for(var j = 0; j < myDogs.length; j++){
-    if (myDogs[j].toLowerCase() === dogGuess.toLowerCase()){
-    // alert('Yes! I had a wonderful dog named ' + dogGuess + '.');
-      i = 5;
-      j = myDogs.length + 1;
-      theyGuessedRight = true;
+  var dogGuess = prompt('Although I don\'t have a dog right now, I have had some great ones in the past. Can you guess one of their names?');
+  
+  i = 0;//making sure i is set back to 0
+  while (i < 5){
+    var theyGuessedRight = false;
+    for(var j = 0; j < myDogs.length; j++){
+      if (myDogs[j].toLowerCase() === dogGuess.toLowerCase()){
+      // alert('Yes! I had a wonderful dog named ' + dogGuess + '.');
+        i = 5;
+        j = myDogs.length + 1;
+        theyGuessedRight = true;
+      }
     }
+    if (theyGuessedRight){
+      alert('Yes! I had a wonderful dog named ' + dogGuess + '.');
+      rightAnswer = rightAnswer + 1;
+    }else if (i < 4){
+      dogGuess =prompt('No, I never had a dog named ' + dogGuess +'. Guess again.');
+    }else {
+      alert('No, I never had a dog named ' + dogGuess +'.');
+    }
+    i++;
   }
-  if (theyGuessedRight){
-    alert('Yes! I had a wonderful dog named ' + dogGuess + '.');
-    rightAnswer = rightAnswer + 1;
-  }else if (i < 4){
-    dogGuess =prompt('No, I never had a dog named ' + dogGuess +'. Guess again.');
-  }else {
-    alert('No, I never had a dog named ' + dogGuess +'.');
-  }
-  i++;
+  alert('Here\'s a list of all my wonderful dogs: '+ myDogs);
+  
+  console.log('right answers: ' + rightAnswer);
+  
 }
-alert('Here\'s a list of all my wonderful dogs: '+ myDogs);
 
-console.log('right answers: ' + rightAnswer);
+myDogsQuestion();
+
+
+// var myDogs = ['Charlie', 'Dusty', 'Ginger', 'Scruffy', 'Max', 'Rocky', 'Phoebe', 'Orry'];
+
+// var dogGuess = prompt('Although I don\'t have a dog right now, I have had some great ones in the past. Can you guess one of their names?');
+
+// i = 0;//making sure i is set back to 0
+// while (i < 5){
+//   var theyGuessedRight = false;
+//   for(var j = 0; j < myDogs.length; j++){
+//     if (myDogs[j].toLowerCase() === dogGuess.toLowerCase()){
+//     // alert('Yes! I had a wonderful dog named ' + dogGuess + '.');
+//       i = 5;
+//       j = myDogs.length + 1;
+//       theyGuessedRight = true;
+//     }
+//   }
+//   if (theyGuessedRight){
+//     alert('Yes! I had a wonderful dog named ' + dogGuess + '.');
+//     rightAnswer = rightAnswer + 1;
+//   }else if (i < 4){
+//     dogGuess =prompt('No, I never had a dog named ' + dogGuess +'. Guess again.');
+//   }else {
+//     alert('No, I never had a dog named ' + dogGuess +'.');
+//   }
+//   i++;
+// }
+// alert('Here\'s a list of all my wonderful dogs: '+ myDogs);
+
+// console.log('right answers: ' + rightAnswer);
 
 
 // tell the user how many questions they got right
