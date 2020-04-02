@@ -18,5 +18,11 @@ This update includes:
  - a 7th question where the visitor has to guess the name of one of my dogs
  - telling the visitor how many questions they answered "correctly" - which means like me
 
+ #### V 1.2 release date 4.3.2020
+This update includes:
+ - putting questions into functions
+ - Devin was the Driver and Marlene was the navigator
+
+
 ### References
 I used https://www.w3schools.com/css/ for help with some of the CSS formatting and JavaScript for random numbers.
