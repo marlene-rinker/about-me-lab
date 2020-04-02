@@ -92,21 +92,42 @@ vegetarianQuestion();
 //   alert(wthMessage);
 // }
 
-// Ask the user if they have a dog
-var hasDog = prompt('Do you have a dog?');
-console.log('Has a dog: ' + hasDog);
 
-if (hasDog.toLowerCase() === 'y' || hasDog.toLowerCase() === 'yes'){
-  // console.log('How fun! I love dogs.');
-  alert('How fun! I love dogs.');
-  rightAnswer = rightAnswer + 1;
-}else if (hasDog.toLowerCase() === 'n' || hasDog.toLowerCase() === 'no'){
-  // console.log('That\'s too bad. Dogs are great!');
-  alert('That\'s too bad. Dogs are great!');
-}else {
-  // console.log(wthMessage);
-  alert(wthMessage);
+function hasDogQuestion(){
+  // Ask the user if they have a dog
+  var hasDog = prompt('Do you have a dog?');
+  console.log('Has a dog: ' + hasDog);
+
+  if (hasDog.toLowerCase() === 'y' || hasDog.toLowerCase() === 'yes'){
+    // console.log('How fun! I love dogs.');
+    alert('How fun! I love dogs.');
+    rightAnswer = rightAnswer + 1;
+  }else if (hasDog.toLowerCase() === 'n' || hasDog.toLowerCase() === 'no'){
+    // console.log('That\'s too bad. Dogs are great!');
+    alert('That\'s too bad. Dogs are great!');
+  }else {
+    // console.log(wthMessage);
+    alert(wthMessage);
+  }
 }
+
+hasDogQuestion();
+
+// // Ask the user if they have a dog
+// var hasDog = prompt('Do you have a dog?');
+// console.log('Has a dog: ' + hasDog);
+
+// if (hasDog.toLowerCase() === 'y' || hasDog.toLowerCase() === 'yes'){
+//   // console.log('How fun! I love dogs.');
+//   alert('How fun! I love dogs.');
+//   rightAnswer = rightAnswer + 1;
+// }else if (hasDog.toLowerCase() === 'n' || hasDog.toLowerCase() === 'no'){
+//   // console.log('That\'s too bad. Dogs are great!');
+//   alert('That\'s too bad. Dogs are great!');
+// }else {
+//   // console.log(wthMessage);
+//   alert(wthMessage);
+// }
 
 // Ask the user if they like hiking
 var likesHiking = prompt('Do you like hiking?');
