@@ -17,6 +17,10 @@ alert('Welcome to my website, ' + userName + '. It\'s nice to meet you. Let\'s g
 // Set up a message to display if the answer isn't yes or no
 var wthMessage = 'Sorry, ' + userName + '. I don\'t know what that means. Let\'s move on.';
 
+// Set up counter variables for right and wrong answers
+var rightAnswer = 0;
+
+
 // Ask the user if they live in Seattle
 var livesInSeattle = prompt('Do you live in Seattle?');
 console.log('Lives in Seattle:' +livesInSeattle);
@@ -24,6 +28,7 @@ console.log('Lives in Seattle:' +livesInSeattle);
 if (livesInSeattle.toLowerCase() === 'y' || livesInSeattle.toLowerCase() === 'yes'){
   // console.log('Cool! I live in Seattle, too.');
   alert('Cool! I live in Seattle, too.');
+  rightAnswer = rightAnswer + 1;
 } else if (livesInSeattle.toLowerCase() === 'n' || livesInSeattle.toLowerCase() === 'no'){
   // console.log('Seattle is a fun place. You should visit sometime.');
   alert('Seattle is a fun place. You should visit sometime.');
@@ -31,6 +36,8 @@ if (livesInSeattle.toLowerCase() === 'y' || livesInSeattle.toLowerCase() === 'ye
   // console.log(wthMessage);
   alert(wthMessage);
 }
+
+
 // Ask the user if they are a vegetarian
 var vegetarian = prompt('Are you a vegetarian?');
 console.log('Vegetarian: ' + vegetarian);
@@ -38,6 +45,7 @@ console.log('Vegetarian: ' + vegetarian);
 if (vegetarian.toLowerCase() === 'y' || vegetarian.toLowerCase() === 'yes'){
   // console.log('Great choice. I\'m a vegetarian, too!');
   alert('Great choice. I\'m a vegetarian, too!');
+  rightAnswer = rightAnswer + 1;
 }else if (vegetarian.toLowerCase() === 'n' || vegetarian.toLowerCase() === 'no'){
   // console.log('If you want to try it, a good way to start is with Meatless Mondays!');
   alert('If you want to try it, a good way to start is with Meatless Mondays!');
@@ -45,6 +53,7 @@ if (vegetarian.toLowerCase() === 'y' || vegetarian.toLowerCase() === 'yes'){
   // console.log(wthMessage);
   alert(wthMessage);
 }
+
 // Ask the user if they have a dog
 var hasDog = prompt('Do you have a dog?');
 console.log('Has a dog: ' + hasDog);
@@ -52,6 +61,7 @@ console.log('Has a dog: ' + hasDog);
 if (hasDog.toLowerCase() === 'y' || hasDog.toLowerCase() === 'yes'){
   // console.log('How fun! I love dogs.');
   alert('How fun! I love dogs.');
+  rightAnswer = rightAnswer + 1;
 }else if (hasDog.toLowerCase() === 'n' || hasDog.toLowerCase() === 'no'){
   // console.log('That\'s too bad. Dogs are great!');
   alert('That\'s too bad. Dogs are great!');
@@ -67,6 +77,7 @@ console.log('Likes hiking: ' + likesHiking);
 if (likesHiking.toUpperCase() === 'Y' || likesHiking.toUpperCase() === 'YES') {
   // console.log('Me, too! There are so many pretty places to get out and explore.');
   alert('Me, too! There are so many pretty places to get out and explore.');
+  rightAnswer = rightAnswer + 1;
 }else if (likesHiking.toUpperCase() === 'N' || likesHiking.toUpperCase() === 'NO'){
   // console.log('That\'s ok. There are other fun ways to experience the outdoors.');
   alert('That\'s ok. There are other fun ways to experience the outdoors.');
@@ -82,6 +93,7 @@ console.log('Likes reading: ' +likesReading);
 if (likesReading.toUpperCase() === 'Y' || likesReading.toUpperCase() === 'YES'){
   // console.log('I like reading too. I\'d rather read than watch TV.');
   alert('I like reading too. I\'d rather read than watch TV.');
+  rightAnswer = rightAnswer + 1;
 }else if (likesReading.toUpperCase() === 'N' || likesReading.toUpperCase() === 'NO'){
   // console.log('Oh well. We don\'t have to like all of the same things.');
   alert('Oh well. We don\'t have to like all of the same things.');
@@ -96,8 +108,8 @@ if (likesReading.toUpperCase() === 'Y' || likesReading.toUpperCase() === 'YES'){
 // let them know what the right answer is after 4 tries
 // log whether or not they got the right answer
 
-//generate a random number for the user to guess
-var myNumber = Math.floor(Math.random() *20);
+//generate a random number between 1 and 20 for the user to guess
+var myNumber = Math.floor(Math.random() * (20 - 1)) + 1;
 console.log('My number is ' + myNumber);
 
 var userNumber = prompt('I\'m thinking of a number between 1 and 20. Can you guess what it is?');
@@ -120,6 +132,7 @@ while (i < 4){
   if(numMatches){
     alert('Great job! You got it. The number I was thinking of was ' + myNumber + '.');
     i = 4;
+    rightAnswer = rightAnswer + 1;
   }else if (i<3){
     userNumber = prompt('Sorry, that number is ' + highLow + '. Try again.');
   }else{
@@ -150,6 +163,7 @@ while (i < 5){
   }
   if (theyGuessedRight){
     alert('Yes! I had a wonderful dog named ' + dogGuess + '.');
+    rightAnswer = rightAnswer + 1;
   }else if (i < 4){
     dogGuess =prompt('No, I never had a dog named ' + dogGuess +'. Guess again.');
   }else {
@@ -158,6 +172,16 @@ while (i < 5){
   i++;
 }
 alert('Here\'s a list of all my wonderful dogs: '+ myDogs);
+
+console.log('right answers: ' + rightAnswer);
+
+
+// tell the user how many questions they got right
+if (rightAnswer > 4){
+  alert('We have quite a bit in common, ' + userName + '. You answered ' + rightAnswer + ' questions the same way I would.');
+}else {
+  alert('Well, ' + userName + ', it looks like we don\'t have too much in common. You only answered ' + rightAnswer + ' questions the same way I would.');
+}
 
 // Display the user's name in a final message
 // console.log('Hope you\'re having a great day, ' + userName + '. Thanks for stopping by!');

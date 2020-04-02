@@ -14,10 +14,9 @@ It also prompts the visitor with a series of 5 questions so we can see what we h
 #### V 1.1 release date 4.2.2020
 This update includes:
  - a new Top 10 section at the bottom of the page
- - a 6th question that has the visitor guess a number
-<!-- clarify the 7th question when known and delete this comment-->
- - a 7th question where the visitor has to guess something that has multiple possible answers
- - reporting the total number of correct answers at the end to tell the user how many they got correct
- 
+ - a 6th question that has the visitor guess a random number between 1 and 20
+ - a 7th question where the visitor has to guess the name of one of my dogs
+ - telling the visitor how many questions they answered "correctly" - which means like me
+
 ### References
-I used https://www.w3schools.com/css/ for help with some of the CSS formatting.
+I used https://www.w3schools.com/css/ for help with some of the CSS formatting and JavaScript for random numbers.
