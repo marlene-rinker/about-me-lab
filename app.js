@@ -210,38 +210,77 @@ likesReadingQuestion();
 // let them know what the right answer is after 4 tries
 // log whether or not they got the right answer
 
-//generate a random number between 1 and 20 for the user to guess
-var myNumber = Math.floor(Math.random() * (20 - 1)) + 1;
-console.log('My number is ' + myNumber);
 
-var userNumber = prompt('I\'m thinking of a number between 1 and 20. Can you guess what it is?');
+function numberGuessQuestion(){
+  //generate a random number between 1 and 20 for the user to guess
+  var myNumber = Math.floor(Math.random() * (20 - 1)) + 1;
+  console.log('My number is ' + myNumber);
 
-var i = 0;
-var highLow;
-var numMatches;
-while (i < 4){
-  userNumber = Number(userNumber);//convert the user's response to a number so it can be compared
-  console.log('userNumber is ' +userNumber);
+  var userNumber = prompt('I\'m thinking of a number between 1 and 20. Can you guess what it is?');
 
-  if (userNumber === myNumber){
-    numMatches = true;
-  }else if (userNumber > myNumber){
-    highLow = 'too high';
-  }else if (userNumber < myNumber){
-    highLow = 'too low';
+  var i = 0;
+  var highLow;
+  var numMatches;
+  while (i < 4){
+    userNumber = Number(userNumber);//convert the user's response to a number so it can be compared
+    console.log('userNumber is ' +userNumber);
+
+    if (userNumber === myNumber){
+      numMatches = true;
+    }else if (userNumber > myNumber){
+      highLow = 'too high';
+    }else if (userNumber < myNumber){
+      highLow = 'too low';
+    }
+
+    if(numMatches){
+      alert('Great job! You got it. The number I was thinking of was ' + myNumber + '.');
+      i = 4;
+      rightAnswer = rightAnswer + 1;
+    }else if (i<3){
+      userNumber = prompt('Sorry, that number is ' + highLow + '. Try again.');
+    }else{
+      alert('Sorry, that number is ' + highLow + '. The number I was thinking of was ' + myNumber + '.');
+    }
+    i++;
   }
-
-  if(numMatches){
-    alert('Great job! You got it. The number I was thinking of was ' + myNumber + '.');
-    i = 4;
-    rightAnswer = rightAnswer + 1;
-  }else if (i<3){
-    userNumber = prompt('Sorry, that number is ' + highLow + '. Try again.');
-  }else{
-    alert('Sorry, that number is ' + highLow + '. The number I was thinking of was ' + myNumber + '.');
-  }
-  i++;
 }
+
+numberGuessQuestion();
+
+
+// //generate a random number between 1 and 20 for the user to guess
+// var myNumber = Math.floor(Math.random() * (20 - 1)) + 1;
+// console.log('My number is ' + myNumber);
+
+// var userNumber = prompt('I\'m thinking of a number between 1 and 20. Can you guess what it is?');
+
+// var i = 0;
+// var highLow;
+// var numMatches;
+// while (i < 4){
+//   userNumber = Number(userNumber);//convert the user's response to a number so it can be compared
+//   console.log('userNumber is ' +userNumber);
+
+//   if (userNumber === myNumber){
+//     numMatches = true;
+//   }else if (userNumber > myNumber){
+//     highLow = 'too high';
+//   }else if (userNumber < myNumber){
+//     highLow = 'too low';
+//   }
+
+//   if(numMatches){
+//     alert('Great job! You got it. The number I was thinking of was ' + myNumber + '.');
+//     i = 4;
+//     rightAnswer = rightAnswer + 1;
+//   }else if (i<3){
+//     userNumber = prompt('Sorry, that number is ' + highLow + '. Try again.');
+//   }else{
+//     alert('Sorry, that number is ' + highLow + '. The number I was thinking of was ' + myNumber + '.');
+//   }
+//   i++;
+// }
 
 // Make a guessing game
 // Multiple answers stored in an array
