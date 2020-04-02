@@ -20,22 +20,41 @@ var wthMessage = 'Sorry, ' + userName + '. I don\'t know what that means. Let\'s
 // Set up counter variables for right and wrong answers
 var rightAnswer = 0;
 
+// creat functions
+function livesInSeattleQuestion(){
+  // Ask the user if they live in Seattle
+  var livesInSeattle = prompt('Do you live in Seattle?');
+  console.log('Lives in Seattle:' +livesInSeattle);
 
-// Ask the user if they live in Seattle
-var livesInSeattle = prompt('Do you live in Seattle?');
-console.log('Lives in Seattle:' +livesInSeattle);
-
-if (livesInSeattle.toLowerCase() === 'y' || livesInSeattle.toLowerCase() === 'yes'){
-  // console.log('Cool! I live in Seattle, too.');
-  alert('Cool! I live in Seattle, too.');
-  rightAnswer = rightAnswer + 1;
-} else if (livesInSeattle.toLowerCase() === 'n' || livesInSeattle.toLowerCase() === 'no'){
-  // console.log('Seattle is a fun place. You should visit sometime.');
-  alert('Seattle is a fun place. You should visit sometime.');
-} else {
-  // console.log(wthMessage);
-  alert(wthMessage);
+  if (livesInSeattle.toLowerCase() === 'y' || livesInSeattle.toLowerCase() === 'yes'){
+    // console.log('Cool! I live in Seattle, too.');
+    alert('Cool! I live in Seattle, too.');
+    rightAnswer = rightAnswer + 1;
+  } else if (livesInSeattle.toLowerCase() === 'n' || livesInSeattle.toLowerCase() === 'no'){
+    // console.log('Seattle is a fun place. You should visit sometime.');
+    alert('Seattle is a fun place. You should visit sometime.');
+  } else {
+    // console.log(wthMessage);
+    alert(wthMessage);
+  }
 }
+
+livesInSeattleQuestion();
+// Ask the user if they live in Seattle
+// var livesInSeattle = prompt('Do you live in Seattle?');
+// console.log('Lives in Seattle:' +livesInSeattle);
+
+// if (livesInSeattle.toLowerCase() === 'y' || livesInSeattle.toLowerCase() === 'yes'){
+//   // console.log('Cool! I live in Seattle, too.');
+//   alert('Cool! I live in Seattle, too.');
+//   rightAnswer = rightAnswer + 1;
+// } else if (livesInSeattle.toLowerCase() === 'n' || livesInSeattle.toLowerCase() === 'no'){
+//   // console.log('Seattle is a fun place. You should visit sometime.');
+//   alert('Seattle is a fun place. You should visit sometime.');
+// } else {
+//   // console.log(wthMessage);
+//   alert(wthMessage);
+// }
 
 
 // Ask the user if they are a vegetarian
