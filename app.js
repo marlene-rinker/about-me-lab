@@ -15,13 +15,13 @@ var i;
 // create functions to ask the questions
 function livesInSeattleQuestion(){
   // Ask the user if they live in Seattle
-  var livesInSeattle = prompt('Do you live in Seattle?');
+  var livesInSeattle = prompt('Do you live in Seattle?').toLowerCase();
   console.log('Lives in Seattle:' +livesInSeattle);
 
-  if (livesInSeattle.toLowerCase() === 'y' || livesInSeattle.toLowerCase() === 'yes'){
+  if (livesInSeattle === 'y' || livesInSeattle === 'yes'){
     alert('Cool! I live in Seattle, too.');
     rightAnswer = rightAnswer + 1;
-  } else if (livesInSeattle.toLowerCase() === 'n' || livesInSeattle.toLowerCase() === 'no'){
+  } else if (livesInSeattle === 'n' || livesInSeattle === 'no'){
     alert('Seattle is a fun place. You should visit sometime.');
   } else {
     alert(wthMessage);
@@ -30,13 +30,13 @@ function livesInSeattleQuestion(){
 
 function vegetarianQuestion(){
   // Ask the user if they are a vegetarian
-  var vegetarian = prompt('Are you a vegetarian?');
+  var vegetarian = prompt('Are you a vegetarian?').toLowerCase();
   console.log('Vegetarian: ' + vegetarian);
 
-  if (vegetarian.toLowerCase() === 'y' || vegetarian.toLowerCase() === 'yes'){
+  if (vegetarian === 'y' || vegetarian === 'yes'){
     alert('Great choice. I\'m a vegetarian, too!');
     rightAnswer = rightAnswer + 1;
-  }else if (vegetarian.toLowerCase() === 'n' || vegetarian.toLowerCase() === 'no'){
+  }else if (vegetarian === 'n' || vegetarian === 'no'){
     alert('If you want to try it, a good way to start is with Meatless Mondays!');
   }else {
     alert(wthMessage);
@@ -45,13 +45,13 @@ function vegetarianQuestion(){
 
 function hasDogQuestion(){
   // Ask the user if they have a dog
-  var hasDog = prompt('Do you have a dog?');
+  var hasDog = prompt('Do you have a dog?').toLowerCase();
   console.log('Has a dog: ' + hasDog);
 
-  if (hasDog.toLowerCase() === 'y' || hasDog.toLowerCase() === 'yes'){
+  if (hasDog === 'y' || hasDog === 'yes'){
     alert('How fun! I love dogs.');
     rightAnswer = rightAnswer + 1;
-  }else if (hasDog.toLowerCase() === 'n' || hasDog.toLowerCase() === 'no'){
+  }else if (hasDog === 'n' || hasDog === 'no'){
     alert('That\'s too bad. Dogs are great!');
   }else {
     alert(wthMessage);
@@ -60,13 +60,13 @@ function hasDogQuestion(){
 
 function likesHikingQuestion(){
   // Ask the user if they like hiking
-  var likesHiking = prompt('Do you like hiking?');
+  var likesHiking = prompt('Do you like hiking?').toUpperCase();
   console.log('Likes hiking: ' + likesHiking);
 
-  if (likesHiking.toUpperCase() === 'Y' || likesHiking.toUpperCase() === 'YES') {
+  if (likesHiking === 'Y' || likesHiking === 'YES') {
     alert('Me, too! There are so many pretty places to get out and explore.');
     rightAnswer = rightAnswer + 1;
-  }else if (likesHiking.toUpperCase() === 'N' || likesHiking.toUpperCase() === 'NO'){
+  }else if (likesHiking === 'N' || likesHiking === 'NO'){
     alert('That\'s ok. There are other fun ways to experience the outdoors.');
   }else {
     alert(wthMessage);
@@ -75,13 +75,13 @@ function likesHikingQuestion(){
 
 function likesReadingQuestion(){
   // Ask the user if they like reading
-  var likesReading = prompt('Do you like reading?');
+  var likesReading = prompt('Do you like reading?').toUpperCase();
   console.log('Likes reading: ' +likesReading);
 
-  if (likesReading.toUpperCase() === 'Y' || likesReading.toUpperCase() === 'YES'){
+  if (likesReading === 'Y' || likesReading === 'YES'){
     alert('I like reading too. I\'d rather read than watch TV.');
     rightAnswer = rightAnswer + 1;
-  }else if (likesReading.toUpperCase() === 'N' || likesReading.toUpperCase() === 'NO'){
+  }else if (likesReading === 'N' || likesReading === 'NO'){
     alert('Oh well. We don\'t have to like all of the same things.');
   }else{
     alert(wthMessage);
@@ -112,8 +112,9 @@ function numberGuessQuestion(){
 
     if(numMatches){
       alert('Great job! You got it. The number I was thinking of was ' + myNumber + '.');
-      i = 4;
+      // i = 4;
       rightAnswer = rightAnswer + 1;
+      break;
     }else if (i<3){
       userNumber = prompt('Sorry, that number is ' + highLow + '. Try again.');
     }else{
@@ -135,8 +136,8 @@ function myDogsQuestion(){
     var theyGuessedRight = false;
     for(var j = 0; j < myDogs.length; j++){
       if (myDogs[j].toLowerCase() === dogGuess.toLowerCase()){
-        i = 5;
-        j = myDogs.length + 1;
+        i = 5;//stop the while loop
+        j = myDogs.length + 1;//stop the for loop after the whole loop finishes; using break exited after this if statement and didn't show the messages
         theyGuessedRight = true;
       }
     }
