@@ -20,8 +20,11 @@ This update includes:
 
  #### V 1.2 release date 4.3.2020
 This update includes:
- - putting questions into functions
- - Devin was the Driver and Marlene was the navigator
+ - putting questions into functions (Devin was the Driver and Marlene was the Navigator)
+ - cleaned up comments
+ - cleaned up use of .toLowerCase() and .toUpperCase() - used fewer times; called on the prompt instead of each comparison
+ - used a break instead of setting the counter in the number guessing question
+ _ created an Images folder and moved the image into it; also updated the html for the new image location
 
 
 ### References
