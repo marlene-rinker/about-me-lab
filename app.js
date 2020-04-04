@@ -157,14 +157,18 @@ function myDogsQuestion(){
 
 }
 
+function askTheQuestions(){
+  livesInSeattleQuestion();
+  vegetarianQuestion();
+  hasDogQuestion();
+  likesHikingQuestion();
+  likesReadingQuestion();
+  numberGuessQuestion();
+  myDogsQuestion();
+}
+
 // ask the questions
-livesInSeattleQuestion();
-vegetarianQuestion();
-hasDogQuestion();
-likesHikingQuestion();
-likesReadingQuestion();
-numberGuessQuestion();
-myDogsQuestion();
+askTheQuestions();
 
 // tell the user how many questions they got right
 if (rightAnswer > 4){
