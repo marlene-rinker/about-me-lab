@@ -1,5 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: #242424;
 }
 
 .title {
@@ -9,30 +10,29 @@ body {
 }
 
 header {
-  border-width: 8px;
+  border-width: 5px;
   border-style:solid;
-  border-color:rgb(234,46,73);
+  border-color:#1818ca;
   border-radius: 10px;
-  background-color: #77c4d3;
+  background-color: #3b76de;
   margin-bottom: 5px;
 }
 
 /* formatting the navigation bar */
 
-nav ul {
-  list-style-type:none;
-  background-color:#77c4d3;
-  margin: 0;
-  padding: 0;
+.navbar {
   overflow: hidden;
   border-radius: 10px;
+  border-width: 5px;
+  border-style:solid;
+  border-color:#1818ca;
+  background-color:#3b76de;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
+.navbar a {
   float: left;
-}
-
-nav ul li a {
   color: white;
   text-decoration: none;
   display: block;
@@ -40,10 +40,15 @@ nav ul li a {
   padding: 14px 16px;
 }
 
-nav ul li a:hover {
-  background-color:rgb(234,46,73);
-  color:#77c4d3;
+.navbar a:hover {
+  background-color:#1818ca;
 }
+
+.navbar a.active {
+  background-color: white;
+  color: #3b76de;
+}
+
 /* end formatting the navigation bar */
 
 #headshot {
@@ -52,22 +57,74 @@ nav ul li a:hover {
 }
 
 h1 {
-  color:rgb(234,46,73);
-  font-size: 40px;
+  color:#1818ca;
+  font-size: 30px;
 
 }
 
 h2 {
-  color:#77c4d3;
+  color:#3b76de;
   font-size: 20px;
 
 }
 
-
 footer {
   font-size:10px;
   font-style:italic;
-  border-top-color:rgb(234,46,73);
+  border-top-color:#1818ca;
   border-top-style:double;
   border-top-width: 5px;
+}
+
+/* Jelly Belly flavor styling */
+
+#cantaloupe-jb:hover {
+  color: #e68d27;
+  font-size: 20px;
+  font-weight: bold;
+}
+#verycherry-jb:hover {
+  color: #e41b2e;
+  font-size: 20px;
+  font-weight: bold;
+}
+#juicypear-jb:hover {
+  color: #8c9753;
+  font-size: 20px;
+  font-weight: bold;
+}
+#sizzlingcinnamon-jb:hover {
+  color: #d12c4e;
+  font-size: 20px;
+  font-weight: bold;
+}
+#sunkisttangerine-jb:hover {
+  color: #fba723;
+  font-size: 20px;
+  font-weight: bold;
+}
+#greenapple-jb:hover {
+  color: #00b463;
+  font-size: 20px;
+  font-weight: bold;
+}
+#blueberry-jb:hover {
+  color: #34607b;
+  font-size: 20px;
+  font-weight: bold;
+}
+#watermelon-jb:hover {
+  color: #505c4e;
+  font-size: 20px;
+  font-weight: bold;
+}
+#lemonlime-jb:hover {
+  color: #c2db37;
+  font-size: 20px;
+  font-weight: bold;
+}
+#topbanana-jb:hover {
+  color: #debf26;
+  font-size: 20px;
+  font-weight: bold;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>About Me</title>
     <link rel="stylesheet" href="style.css">
@@ -9,19 +9,13 @@
     <header>
       <p class = "title">All About Me</p>
     </header>
-    <nav>
-      <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">Future page</a>
-        </li>
-        <li>
-          <a href="#">Future page</a>
-        </li>
-      </ul>
+
+    <nav class = "navbar">
+      <a class = "active" href="index.html">Home</a>
+      <a href="future-page1.html">Future page 1</a>
+      <a href="future-page2.html">Future page 2</a>
     </nav>
+    
     <main>
       <!-- put my biography here -->
       <img id="headshot" src="images/MarlenePic.jpg" alt="Marlene" height="200px" >
@@ -54,19 +48,18 @@
       <!-- add a top 10 ordered list of something -->
 
       <h2>Top 10 List</h2>
-      <p>I love Jelly Belly&copy jelly beans. They're the best!</p>
-      <p>Here's a list of my top 10 flavors:</p>
+      <p>I love <a href = "https://www.jellybelly.com" target= "_blank">Jelly Belly</a><sup>&copy</sup> jelly beans. They're the best!</p>
+      <p>Here's a list of my top 10 flavors. Hover over each one and see what happens.</p>
       <ol>
-        <li>Cantaloupe</li>
-        <li>Very Cherry</li>
-        <li>Juicy Pear</li>
-        <li>Sizzling Cinnamon</li>
-        <li>Sunkist&copy Tangerine</li>
-        <li>Green Apple</li>
-        <li>Blueberry</li>
-        <li>Watermelon</li>
-        <li>Lemon Lime</li>
-        <li>Top Banana</li>
+        <li id = "cantaloupe-jb">Cantaloupe</li>
+        <li id = "verycherry-jb">Very Cherry</li>
+        <li id = "juicypear-jb">Juicy Pear</li>
+        <li id = "sizzlingcinnamon-jb">Sizzling Cinnamon</li>
+        <li id = "sunkisttangerine-jb">Sunkist<sup>&copy</sup> Tangerine</li>
+        <li id = "greenapple-jb">Green Apple</li>
+        <li id = "blueberry-jb">Blueberry</li>
+        <li id = "watermelon-jb">Watermelon</li>
+        <li id = "lemonlime-jb">Top Banana</li>
       </ol>
 
     </main>
