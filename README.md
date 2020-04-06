@@ -26,6 +26,14 @@ This update includes:
  - used a break instead of setting the counter in the number guessing question
  _ created an Images folder and moved the image into it; also updated the html for the new image location
 
+ #### V 2.1 release date 4.6.2020
+This update includes:
+ - updated the CSS styles for accessibility
+ - updated nav bar so it works and added placeholder pages
+ - improved user experience with the nav bar
+ - added interactivity to the top 10 list section
+
+
 
 ### References
 I used https://www.w3schools.com/css/ for help with some of the CSS formatting and JavaScript for random numbers.
